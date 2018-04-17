@@ -1,0 +1,19 @@
+So, we want to build an SQLite database for this application. What do we need to do?
+
+1. Create a database.
+ - "jdbc:sqlite:C:\\Users\\Cameron\\sqlite\\sqlite3\\db\\" + fileName
+ - Make fileName = "inverted-index.db"
+ - Or just make it in DB Browser...
+ - Then create a table(s).
+  >  InvertedIndex (many-many)
+   # word (primary)
+   # docID (primary)
+   # location (will vary)
+ 
+2. Take the part-r-0000X files and add them to the tables via SQL INSERT statements.
+ - That might be tough... or will it?
+ - I'll need the ability to read through a gzip file, extract the information and add it to the table.
+ 
+3. Make it accessible via SQL SELECT statements.
+ - This is the easy part... sort of.
+ - So, use Javascript, or JSP's?
